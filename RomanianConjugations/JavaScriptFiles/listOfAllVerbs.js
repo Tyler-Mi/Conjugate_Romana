@@ -406,11 +406,11 @@ export const perfectulCompusVerbs = {
     },
     "a veni": {
         "eu": 'am venit',
-        "tu": 'ai rupt',
-        "el/ea": 'a rupt',
-        "noi": 'am rupt',
-        "voi": 'ați rupt',
-        "ei/ele": 'au rupt'
+        "tu": 'ai venit',
+        "el/ea": 'a venit',
+        "noi": 'am venit',
+        "voi": 'ați venit',
+        "ei/ele": 'au venit'
     },
     "a urî": {
         "eu": 'am urât',
