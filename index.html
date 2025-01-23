@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conjugate Romanian</title>
+    <link rel="stylesheet" href="CSSFiles/normalize.css" />
+    <link rel="stylesheet" href="CSSFiles/stylesTwo.css" />
+  </head>
+  <body>
+    <!-- Placeholder for the header-->
+    <div id="header-placeholder"></div>
+
+    <main class="main-flex-container">
+      <section class="flex-item flex-item-container">
+        <section class="flex-item-item">
+          <h3 class="category-title">Practice Cojugations</h3>
+          <ul>
+            <li>Learn through repition</li>
+            <li>Learn through grammar tests</li>
+          </ul>
+        </section>
+        <section>
+          <img
+            src="./Images/RomanianCharacterReading.png"
+            alt="Romanian Character"
+            class="index-images"
+          />
+        </section>
+      </section>
+      <section class="flex-item flex-item-container">
+        <section class="flex-item-item">
+          <img
+            src="./Images/romanianDrawingBrasov.png"
+            alt="Romanian Character"
+            class="index-images"
+          />
+        </section>
+        <section class="flex-item-item">
+          <h3 class="category-title">How to Use</h3>
+          <p>
+            Below are the tenses/grammar practice and you can go and select what
+            you would like to practice. When you go to the navigated tab you it
+            will tell you a pronoun and then the unconjugated verb. you just
+            have to put in the conjugated verb for the tense and the correct
+            person.
+          </p>
+        </section>
+      </section>
+      <section class="flex-item">
+        <h3 class="category-title">Present Tenses</h3>
+        <ul class="tense_list">
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/present_tense_conjugation_practice.html"
+              >Present</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="flex-item">
+        <h3 class="category-title">Past Tenses</h3>
+        <ul class="tense_list">
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/PerfectulCompus.html">Perfectul Compus</a>
+          </li>
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/Immperfect.html">Imperfect</a>
+          </li>
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/pluperfect.html">Pluperfect</a>
+          </li>
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/simplePerfect.html">Simple Perfect</a>
+          </li>
+        </ul>
+      </section>
+      <section class="flex-item">
+        <h3 class="category-title">Future Tenses</h3>
+        <ul class="tense_list">
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/viitoareFormal.html">Viitoare Formal</a>
+          </li>
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/viitoare.html">Viitoare Comun</a>
+          </li>
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/viitoareTypeThree.html">Viitoare Type Three</a>
+          </li>
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/futurePerfect.html">Future Perfect</a>
+          </li>
+        </ul>
+      </section>
+      <section class="flex-item">
+        <h3 class="category-title">Conditional</h3>
+        <ul class="tense_list">
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/conditionalPresent.html"
+              >Conditional Present</a
+            >
+          </li>
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/conditionalPerfect.html"
+              >Conditional Perfect</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="flex-item">
+        <h3>Conjunctive/Subjunctive</h3>
+        <ul class="tense_list">
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/presentConjunctivConjugation.html"
+              >Present Conjunctive</a
+            >
+          </li>
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/conjunctivePerfect.html"
+              >Perfect Conjunctive</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="flex-item">
+        <h3 class="category-title">Grammar Practice</h3>
+        <ul class="tense_list">
+          <li class="tenseLinks">
+            <a href="./HTMLFiles/genativeArticlesPractice.html"
+              >Genitive Articles Practice</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="flex-item">
+        <h3 class="category-title">
+          <a href="./HTMLFiles/worksCited.html">Works Cited</a>
+        </h3>
+      </section>
+    </main>
+    <footer class="footer-flex-container">
+      <section class="footer-flex-item">
+        <h3>Contact Us</h3>
+        <ul>
+          <li class="footer-list">support@conjugateromanian.org</li>
+        </ul>
+      </section>
+      <section class="footer-flex-item">
+        <h3>
+          <a class="footer-link" href="./HTMLFiles/worksCited.html"
+            >Works Cited</a
+          >
+        </h3>
+      </section>
+    </footer>
+    <script src="./JavaScriptFiles/popUpMenu.js"></script>
+    <script>
+      // Load the header content dynamically
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("./HTMLFiles/headerForIndex.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-placeholder").innerHTML = data;
+
+            // Add the collapsible menu functionality
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = document.querySelector(".content");
+                if (content.style.display === "flex") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "flex"; // Ensure it uses flex layout
+                }
+              });
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
