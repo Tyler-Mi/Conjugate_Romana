@@ -1,0 +1,13 @@
+.flex-item-blog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .flex-blog-item-item {
+    margin: 1rem;
+  }
+
+h3 {
+    font-size: 20px;
+}
