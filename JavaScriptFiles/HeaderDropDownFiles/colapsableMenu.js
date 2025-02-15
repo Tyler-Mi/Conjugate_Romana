@@ -1,6 +1,6 @@
 // Load the header content dynamically
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("../../HTMLFiles/DropDownMenu/DropDownMenu.html")
+  fetch("https://conjugateromanian.org/HTMLFiles/DropDownMenu/DropDownMenu.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("header-placeholder").innerHTML = data;
